@@ -1,17 +1,19 @@
 # 異國美食大全Foreign-cuisine-recipe
 
 ## Introduction
-在這個網站中，會隨機出現一道美食的圖片以及該美食的步驟還有參考影片
+在這個網站中，會隨機出現一道美食的圖片以及該美食的步驟還有參考影片。
 
 
 
 ## Build
-
+```
+pip3 install remi
+```
 
 
 
 ## Remi
-Remi是
+Remi是一個
 
 
 
