@@ -8,14 +8,14 @@
 
 
 
-## Build
+## Build process
 ```
 pip3 install remi
 ```
 
+## Result
 
-
-## Remi
+## Detail
 Remi是一個能夠很輕鬆地來處理網頁前端的一個套件，使用的方法也與HTML與CSS相似，非常容易就能夠上手。
 
 
