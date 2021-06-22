@@ -1,4 +1,4 @@
-# About culinary delights
+# Foreign-cuisine-recipe
 
 ## Introduction
 在全球化的社會中，網路與交通的發達，讓大家能夠輕輕鬆鬆的品嚐到來自不同國家的美食。這些異國美食不但替我們的味蕾帶來了與平常更加不同的享受，同時也讓我們能夠更加深入了解和欣賞異國的文化。
