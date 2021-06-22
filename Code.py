@@ -15,7 +15,6 @@ def get_access_token():
     #        print(a["meals"][0]["strIngredient"+str(i)])
     #        print(f"https://www.google.com/search?q={a['meals'][0]['strIngredient'+str(i)].replace(' ','%20')}")
     #print(count)
-
     #print(a["meals"][0]["strMeal"])
     #print(a["meals"][0]["strYoutube"])
     #print(a["meals"][0]["strMealThumb"])
@@ -23,7 +22,6 @@ def get_access_token():
     #mystr = a["meals"][0]["strYoutube"]
     #mystr=mystr.split('=')
     #print(mystr[1])
-
 class Recipe(App):
     def __init__(self,*args):
         super(Recipe,self).__init__(*args)
@@ -58,8 +56,8 @@ class Recipe(App):
         self.photo.attributes["position"]="absolute"
         self.photo.style.update({"padding-left":"80%","margin-top":"80%"})
         self.myimg = gui.Image("http://img.yao51.com/jiankangtuku/nllhohlhcv.jpeg",width="33%",height="33%")
-        subContainerLeft.style.update({"border-top":"1px solid black","margin-top":"0.5%"})
-        subContainerRight.style.update({"border-top": "1px solid black", "margin-top": "0.5%"})
+        subContainerLeft.style.update({"border-top":"1px solid black","margin-top":"0.1%"})
+        subContainerRight.style.update({"border-top": "1px solid black", "margin-top": "0.1%"})
 
         self.ins=gui.Label('Instructions: ')
         self.ins.style["text-align"] = "left"
