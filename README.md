@@ -1,7 +1,8 @@
 # 異國料理食譜Foreign-cuisine-recipe
 
 ## Introduction
-在全球化的社會中，大家越來越喜歡嘗試異國料理，因此在這個網站中，會隨機的出現一道美食的圖片，顯示這個美食的名稱與國家，以及該美食的步驟、所需食材還有參考影片。
+在這全球化的社會中，大家越來越輕鬆可以品嘗到外國的美食，這些異國的美食不僅帶給了我們味蕾的享受，同時也讓我們能夠接觸和欣賞異國的文化，
+因此在這個網站中，會隨機的出現一道美食的圖片，顯示這個美食的名稱與國家，以及該美食的步驟、所需食材還有參考影片。
 
 本程式透過Free Meal API所提供的可以隨機產生一道料理的API，並透過remi來處理成網頁的形式，
 使得資料能夠經由簡單明瞭的網站讓使用者能夠輕易地看懂。
@@ -13,7 +14,7 @@
 ```
 pip3 install requests
 ```
-再來安裝remi
+再來必須要安裝remi
 ```
 pip3 install remi
 ```
@@ -22,8 +23,7 @@ pip3 install remi
 ```
 python3 myfood.py
 ```
-## Result
-![image](https://github.com/Allen1072031/Foreign-cuisine-recipe/blob/main/result.jpg)
+
 
 ## Detail
 使用themealdb所提供的API來取得的資料
@@ -31,7 +31,7 @@ python3 myfood.py
 url = "https://www.themealdb.com/api/json/v1/1/random.php"
         text = requests.get(url)
 ```
-這邊為接收到的json的形式，可以從strMeal取得食物的名稱，strArea取得食物的國家，strInstructions取得食物的步驟，strIngredient取得食物所需的食材,strMealThumb取得食物的照片，strYoutube取得食物在youtube的教學影片。
+這邊為隨機接收到一道料理的json的形式，可以從strMeal取得食物的名稱，strArea取得食物的國家，strInstructions取得食物的步驟，strIngredient取得食物所需的食材,strMealThumb取得食物的照片，strYoutube取得食物在youtube的教學影片。
 ```json
 {
     "meals": [
@@ -93,9 +93,16 @@ url = "https://www.themealdb.com/api/json/v1/1/random.php"
     ]
 }
 ```
-Remi是一個能夠很輕鬆地來處理網頁前端的一個套件，使用的方法也與HTML與CSS相似，非常容易就能夠上手。
-
-
+Remi是python能夠輕鬆地來處理網頁前端的一個套件，使用的方法也與HTML與CSS相似，非常容易就能夠上手。
+以下是個簡單的remi範例，下方的程式碼是用來顯示食物的名稱，透過第二行所寫的style可以用來更改成自己想要的樣子。
+```
+self.name = gui.Label('Food name: '+a["meals"][0]["strMeal"])
+self.name.style["text-align"] = "center"
+self.name.style["padding"]="5px"
+container.append(self.name)
+```
+## Result
+![image](https://github.com/Allen1072031/Foreign-cuisine-recipe/blob/main/result.jpg)
 
 ## Reference
 1. [Free Meal API](https://www.themealdb.com/api.php)
