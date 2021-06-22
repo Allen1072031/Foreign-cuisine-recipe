@@ -15,6 +15,7 @@ pip3 install remi
 ```
 
 ## Result
+![image](https://github.com/Allen1072031/Foreign-cuisine-recipe/blob/main/result.jpg)
 
 ## Detail
 Remi是一個能夠很輕鬆地來處理網頁前端的一個套件，使用的方法也與HTML與CSS相似，非常容易就能夠上手。
