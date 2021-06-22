@@ -36,7 +36,7 @@ class Recipe(App):
         container.style["background-color"] = 'rgb(235,148,24)'
         url = "https://www.themealdb.com/api/json/v1/1/random.php"
         text = requests.get(url)
-        print(text.json())
+        #print(text.json())
         a = text.json()
         self.name = gui.Label('Food name: '+a["meals"][0]["strMeal"])
         self.name.style["text-align"] = "center"
