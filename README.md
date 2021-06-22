@@ -107,7 +107,7 @@ self.name.style["padding"]="5px"
 container.append(self.name)
 ```
 ## Result
-從結果的圖片來看，上方顯示出了這道料理的名稱以及國家，左邊顯示出了料理的照片，右邊則是顯示了料理的詳細步驟，所需食材以及相關的影片提供參考。
+從結果的圖片來看，上方顯示出了這道料理的名稱以及國家，左邊顯示出了料理的照片，右邊則是顯示了料理的詳細步驟，所需食材以及相關的影片提供參考，如果網頁無法成功顯示，請再重新跑一次程式
 ![image](https://github.com/Allen1072031/Foreign-cuisine-recipe/blob/main/result.jpg)
 
 ## Reference
