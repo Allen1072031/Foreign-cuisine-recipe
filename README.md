@@ -18,6 +18,10 @@ pip3 install requests
 pip3 install remi
 ```
 
+## Execute
+```
+python3 food.py
+```
 ## Result
 ![image](https://github.com/Allen1072031/Foreign-cuisine-recipe/blob/main/result.jpg)
 
