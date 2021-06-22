@@ -91,6 +91,6 @@ class Recipe(App):
 
         return container
 
-#start(Recipe)
+start(Recipe)
 get_access_token()
 
