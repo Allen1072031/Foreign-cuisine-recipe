@@ -8,13 +8,13 @@ def get_access_token():
     print(text.json())
     a = text.json()
     #mystr=a["meals"][0]["strIngredient1"]+
-    count=0
-    for i in range(1,21):
-        if a["meals"][0]["strIngredient"+str(i)]!="":
-            count+=1
-            print(a["meals"][0]["strIngredient"+str(i)])
-            print(f"https://www.google.com/search?q={a['meals'][0]['strIngredient'+str(i)].replace(' ','%20')}")
-    print(count)
+    #count=0
+    #for i in range(1,21):
+    #    if a["meals"][0]["strIngredient"+str(i)]!="":
+    #        count+=1
+    #        print(a["meals"][0]["strIngredient"+str(i)])
+    #        print(f"https://www.google.com/search?q={a['meals'][0]['strIngredient'+str(i)].replace(' ','%20')}")
+    #print(count)
 
     #print(a["meals"][0]["strMeal"])
     #print(a["meals"][0]["strYoutube"])
@@ -46,17 +46,21 @@ class Recipe(App):
         self.area=gui.Label('Country: '+a["meals"][0]["strArea"])
         self.area.style["text-align"] = "center"
         self.area.style["padding"] = "3px"
+
         mystr = a["meals"][0]["strYoutube"]
         mystr = mystr.split('=')
         sor = "https://www.youtube.com/embed/"+mystr[1]
         self.link = gui.Widget()
         self.link.add_child('iframe','<iframe width="350" height="350" src='+sor+' title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>')
         self.link.style.update({"float":"left","border-left":"1px solid black","margin":"0px auto","padding-left":"25%","padding-top":"1%","padding-bottom":"1%"})
+
         self.photo = gui.Image(a["meals"][0]["strMealThumb"],width="60%",height="60%")
         self.photo.attributes["position"]="absolute"
+        self.photo.style.update({"padding-left":"80%","margin-top":"80%"})
         self.myimg = gui.Image("http://img.yao51.com/jiankangtuku/nllhohlhcv.jpeg",width="33%",height="33%")
         subContainerLeft.style.update({"border-top":"1px solid black","margin-top":"0.5%"})
         subContainerRight.style.update({"border-top": "1px solid black", "margin-top": "0.5%"})
+
         self.ins=gui.Label('Instructions: ')
         self.ins.style["text-align"] = "left"
         self.ins.style["font-size"] = "20px"
@@ -64,7 +68,6 @@ class Recipe(App):
         self.ins.style["margin-top"] = "1px auto"
         self.ins.style["padding-left"] = "1%"
         self.ins.style["border-left"]="1px solid black"
-
         self.st = gui.Label(a["meals"][0]["strInstructions"])
         self.name.style["font-size"] = "30px"
         self.area.style["font-size"] = "20px"
@@ -82,6 +85,29 @@ class Recipe(App):
         subContainerRight.append(self.ins)
         subContainerRight.append(self.st)
 
+        self.ing = gui.Label('Ingrediants: ')
+        self.ing.style["text-align"] = "left"
+        self.ing.style["font-size"] = "20px"
+        self.ing.style["color"] = "red"
+        self.ing.style["margin-top"] = "1px auto"
+        self.ing.style["padding-left"] = "1%"
+        self.ing.style["padding-bottom"] = "1%"
+        self.ing.style["border-left"] = "1px solid black"
+        subContainerRight.append(self.ing)
+        for i in range(1, 21):
+            if a["meals"][0]["strIngredient" + str(i)] != "":
+                if a["meals"][0]["strIngredient" + str(i+1)] == "":
+                    self.ingre = gui.Label(a["meals"][0]["strIngredient" + str(i)])
+                    self.ingre.style.update({"border-left": "1px solid black","text-align":"left","padding-left":"1%","border-bottom": "1px solid black","padding-bottom":"1%"})
+                    self.ingre.style["font-size"] = "16px"
+                    subContainerRight.append(self.ingre)
+                #print(a["meals"][0]["strIngredient" + str(i)])
+                else:
+                    self.ingre = gui.Label(a["meals"][0]["strIngredient" + str(i)])
+                    self.ingre.style.update({"border-left":"1px solid black","text-align":"left","padding-left":"1%"})
+                    self.ingre.style["font-size"] = "16px"
+                    subContainerRight.append(self.ingre)
+                #print(f"https://www.google.com/search?q={a['meals'][0]['strIngredient' + str(i)].replace(' ', '%20')}")
         subContainerRight.append(self.link)
         subContainerRight.append(self.myimg)
         self.subContainerRight = subContainerRight
@@ -90,7 +116,7 @@ class Recipe(App):
         container.append(horizontalContainer)
 
         return container
-
-start(Recipe)
-get_access_token()
+if __name__ == '__main__':
+    start(Recipe)
+#get_access_token()
 
