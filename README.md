@@ -30,7 +30,7 @@ python3 myfood.py
 
 
 ## Detail
-使用themealdb所提供的API來取得的資料
+使用themealdb所提供的API來獲取資料
 ```
 url = "https://www.themealdb.com/api/json/v1/1/random.php"
         text = requests.get(url)
