@@ -20,7 +20,7 @@ pip3 install remi
 
 ## Execute
 ```
-python3 food.py
+python3 myfood.py
 ```
 ## Result
 ![image](https://github.com/Allen1072031/Foreign-cuisine-recipe/blob/main/result.jpg)
