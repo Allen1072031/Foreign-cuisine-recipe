@@ -9,7 +9,11 @@
 
 
 ## Build process
-必須要先安裝remi
+首先必須先安裝requests
+```
+pip3 install requests
+```
+再來安裝remi
 ```
 pip3 install remi
 ```
