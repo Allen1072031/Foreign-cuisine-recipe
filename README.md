@@ -1,4 +1,4 @@
-# 異國美食大全Foreign-cuisine-recipe
+# 異國料理食譜Foreign-cuisine-recipe
 
 ## Introduction
 在全球化的社會中，大家越來越喜歡嘗試異國料理，因此在這個網站中，會隨機的出現一道美食的圖片，顯示這個美食的名稱與國家，以及該美食的步驟、所需食材還有參考影片。
