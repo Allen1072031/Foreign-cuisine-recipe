@@ -1,4 +1,5 @@
 # Foreign-cuisine-recipe
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FAllen1072031%2FForeign-cuisine-recipe&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 ## Introduction
 在全球化的社會中，網路與交通的發達，讓大家能夠輕輕鬆鬆的品嚐到來自不同國家的美食。這些異國美食不但替我們的味蕾帶來了與平常更加不同的享受，同時也讓我們能夠更加深入了解和欣賞異國的文化。
