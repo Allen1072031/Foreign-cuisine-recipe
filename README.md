@@ -9,7 +9,7 @@
 
 
 ## Build process
-
+必須要先安裝remi
 ```
 pip3 install remi
 ```
